@@ -1,10 +1,15 @@
-function pressKey(key){
+function pressKey(key){ 
+    let keyBox = document.querySelectorAll('.key-box')
+    keyBox.forEach(element => {
+        element.style.boxShadow = '0 0 10px #999'
+        element.style.transform = 'scale(1)'
+    });
     document.getElementById(key).style.boxShadow = '0 0 2px #999'
-    document.getElementById(key).style.transform = 'scale(0.9)'
-    setTimeout(function(){
+    document.getElementById(key).style.transform = 'scale(0.9)'  
+    document.body.onkeyup = function(){     
         document.getElementById(key).style.boxShadow = '0 0 10px #999'
         document.getElementById(key).style.transform = 'scale(1)' 
-    }, 200)  
+    }       
 }
 document.body.onkeydown = function(e){
     if(e.keyCode == 27){
