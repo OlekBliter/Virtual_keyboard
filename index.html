@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Virtual Keyboard</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="container">
+            <div class="keyboard">
+                <div class="row r1">
+                    <div class="key-box f-keys" id="esc">Esc</div>
+                    <div class="key-box f-keys" id="f1">F1</div>
+                    <div class="key-box f-keys" id="f2">F2</div>
+                    <div class="key-box f-keys" id="f3">F3</div>
+                    <div class="key-box f-keys" id="f4">F4</div>
+                    <div class="key-box f-keys" id="f5">F5</div>
+                    <div class="key-box f-keys" id="f6">F6</div>
+                    <div class="key-box f-keys" id="f7">F7</div>
+                    <div class="key-box f-keys" id="f8">F8</div>
+                    <div class="key-box f-keys" id="f9">F9</div>
+                    <div class="key-box f-keys" id="f10">F10</div>
+                    <div class="key-box f-keys" id="f11">F11</div>
+                    <div class="key-box f-keys" id="f12">F12</div>
+                    <div class="key-box f-keys" id="prtSc">PrtSc</div>
+                    <div class="key-box f-keys" id="insert">Insert</div>
+                    <div class="key-box f-keys" id="delete">Delete</div>
+                </div>
+                <div class="row r2">
+                    <div class="key-box number-key" id="wavyLine">~</div>
+                    <div class="key-box number-key" id="n1">1</div>
+                    <div class="key-box number-key" id="n2">2</div>
+                    <div class="key-box number-key" id="n3">3</div>
+                    <div class="key-box number-key" id="n4">4</div>
+                    <div class="key-box number-key" id="n5">5</div>
+                    <div class="key-box number-key" id="n6">6</div>
+                    <div class="key-box number-key" id="n7">7</div>
+                    <div class="key-box number-key" id="n8">8</div>
+                    <div class="key-box number-key" id="n9">9</div>
+                    <div class="key-box number-key" id="n0">0</div>
+                    <div class="key-box number-key" id="hyphen">-</div>
+                    <div class="key-box number-key" id="equal">=</div>
+                    <div class="key-box number-key" id="backspace">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
+                            <path fill-rule="evenodd" d="M.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L1.707 7.5H10.5a.5.5 0 0 1 0 1H1.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z"/>
+                        </svg>
+                        Backspace
+                    </div>
+                </div>
+                <div class="row r3">
+                    <div class="key-box firstLetterPow-keys" id="tab">
+                        Tab
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5zm14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5z"/>
+                        </svg>
+                    </div>
+                    <div class="key-box firstLetterPow-keys" id="q">Q</div>
+                    <div class="key-box firstLetterPow-keys" id="w">W</div>
+                    <div class="key-box firstLetterPow-keys" id="e">E</div>
+                    <div class="key-box firstLetterPow-keys" id="r">R</div>
+                    <div class="key-box firstLetterPow-keys" id="t">T</div>
+                    <div class="key-box firstLetterPow-keys" id="y">Y</div>
+                    <div class="key-box firstLetterPow-keys" id="u">U</div>
+                    <div class="key-box firstLetterPow-keys" id="i">I</div>
+                    <div class="key-box firstLetterPow-keys" id="o">O</div>
+                    <div class="key-box firstLetterPow-keys" id="p">P</div>
+                    <div class="key-box firstLetterPow-keys" id="bracketl">{</div>
+                    <div class="key-box firstLetterPow-keys" id="bracketr">}</div>
+                    <div class="key-box firstLetterPow-keys" id="backslash">/</div>
+                </div>
+                <div class="row r4">
+                    <div class="key-box secondLetterRow-keys" id="caps">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-capslock" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M7.27 1.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1H1.654C.78 9.5.326 8.455.924 7.816L7.27 1.047zM14.346 8.5 8 1.731 1.654 8.5H4.5a1 1 0 0 1 1 1v1h5v-1a1 1 0 0 1 1-1h2.846zm-9.846 5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-1zm6 0h-5v1h5v-1z"/>
+                        </svg>
+                        CapsLk
+                    </div>
+                    <div class="key-box secondLetterRow-keys" id="a">A</div>
+                    <div class="key-box secondLetterRow-keys" id="s">S</div>
+                    <div class="key-box secondLetterRow-keys" id="d">D</div>
+                    <div class="key-box secondLetterRow-keys" id="f">F</div>
+                    <div class="key-box secondLetterRow-keys" id="g">G</div>
+                    <div class="key-box secondLetterRow-keys" id="h">H</div>
+                    <div class="key-box secondLetterRow-keys" id="j">J</div>
+                    <div class="key-box secondLetterRow-keys" id="k">K</div>
+                    <div class="key-box secondLetterRow-keys" id="l">L</div>
+                    <div class="key-box secondLetterRow-keys" id="semicolon">;</div>
+                    <div class="key-box secondLetterRow-keys" id="quote">'</div>
+                    <div class="key-box secondLetterRow-keys" id="enter">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5z"/>
+                        </svg>
+                        Enter
+                    </div>
+                </div>
+                <div class="row r5">
+                    <div class="key-box thirdLetterRow-keys" id="lshift">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shift" viewBox="0 0 16 16">
+                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047zM14.346 9.5 8 2.731 1.654 9.5H4.5a1 1 0 0 1 1 1v3h5v-3a1 1 0 0 1 1-1h2.846z"/>
+                        </svg>
+                        Shift
+                    </div>
+                    <div class="key-box thirdLetterRow-keys" id="z">Z</div>
+                    <div class="key-box thirdLetterRow-keys" id="x">X</div>
+                    <div class="key-box thirdLetterRow-keys" id="c">C</div>
+                    <div class="key-box thirdLetterRow-keys" id="v">V</div>
+                    <div class="key-box thirdLetterRow-keys" id="b">B</div>
+                    <div class="key-box thirdLetterRow-keys" id="n">N</div>
+                    <div class="key-box thirdLetterRow-keys" id="m">M</div>
+                    <div class="key-box thirdLetterRow-keys" id="coma">,</div>
+                    <div class="key-box thirdLetterRow-keys" id="point">.</div>
+                    <div class="key-box thirdLetterRow-keys" id="questionMark">?</div>
+                    <div class="key-box thirdLetterRow-keys" id="rshift">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shift" viewBox="0 0 16 16">
+                            <path d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047zM14.346 9.5 8 2.731 1.654 9.5H4.5a1 1 0 0 1 1 1v3h5v-3a1 1 0 0 1 1-1h2.846z"/>
+                        </svg>
+                        Shift
+                    </div>
+                </div>
+                <div class="row r6">
+                    <div class="key-box lastRow-keys" id="lctrl">Ctrl</div>
+                    <div class="key-box lastRow-keys" id="fn">Fn</div>
+                    <div class="key-box lastRow-keys" id="windows">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-windows" viewBox="0 0 16 16">
+                        <path d="M6.555 1.375 0 2.237v5.45h6.555V1.375zM0 13.795l6.555.933V8.313H0v5.482zm7.278-5.4.026 6.378L16 16V8.395H7.278zM16 0 7.33 1.244v6.414H16V0z"/>
+                        </svg>
+                    </div>
+                    <div class="key-box lastRow-keys" id="lalt">Alt</div>
+                    <div class="key-box lastRow-keys" id="space"></div>
+                    <div class="key-box lastRow-keys" id="ralt">Alt</div>
+                    <div class="key-box lastRow-keys" id="contextMenu">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-card-list" viewBox="0 0 16 16">
+                            <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
+                            <path d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8zm0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zM4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0z"/>
+                        </svg>
+                    </div>
+                    <div class="key-box lastRow-keys" id="rctrl">Ctrl</div>
+                    <div class="arrows">
+                        <div class="top-part">
+                            <div class="key-box thirdLetterRow-keys" id="topArrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="bottom-part">
+                            <div class="key-box lastRow-keys" id="leftArrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                </svg>
+                            </div>
+                            <div class="key-box lastRow-keys" id="bottomArrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-down" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1z"/>
+                                </svg>
+                            </div>
+                            <div class="key-box lastRow-keys" id="rightArrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>
