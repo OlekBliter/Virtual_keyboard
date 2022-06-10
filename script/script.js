@@ -1,5 +1,8 @@
+let keyBox = document.querySelectorAll('.key-box')
+
+let capsClick = true
+
 function pressKey(key){ 
-    let keyBox = document.querySelectorAll('.key-box')
     keyBox.forEach(element => {
         element.style.boxShadow = '0 0 10px #999'
         element.style.transform = 'scale(1)'
@@ -11,6 +14,35 @@ function pressKey(key){
         document.getElementById(key).style.transform = 'scale(1)' 
     }       
 }
+// click on the key with the mouse
+keyBox.forEach(element => {
+    element.onclick = function(){
+        element.style.boxShadow = '0 0 2px #999'
+        element.style.transform = 'scale(0.9)' 
+        setTimeout(function(){
+            element.style.boxShadow = '0 0 10px #999'
+            element.style.transform = 'scale(1)' 
+        }, 200)
+    }
+});
+caps.onclick = function(){
+    caps.style.boxShadow = '0 0 2px #999'
+    caps.style.transform = 'scale(0.9)' 
+    setTimeout(function(){
+        caps.style.boxShadow = '0 0 10px #999'
+        caps.style.transform = 'scale(1)' 
+    }, 200)
+    if(capsClick == true){
+        document.querySelector('.capsCircle').style.background = 'white'
+        document.querySelector('.capsCircle').style.boxShadow = '0 0 15px white'
+        capsClick = false
+    }else{
+        document.querySelector('.capsCircle').style.background = '#909090'
+        document.querySelector('.capsCircle').style.boxShadow = 'none'
+        capsClick = true
+    }
+}
+// click on key with the keyboard
 document.body.onkeydown = function(e){
     if(e.keyCode == 27){
         pressKey('esc')
@@ -102,6 +134,15 @@ document.body.onkeydown = function(e){
         pressKey('backslash')
     }else if(e.keyCode == 20){
         pressKey('caps')
+        if(capsClick == true){
+            document.querySelector('.capsCircle').style.background = 'white'
+            document.querySelector('.capsCircle').style.boxShadow = '0 0 15px white'
+            capsClick = false
+        }else{
+            document.querySelector('.capsCircle').style.background = '#909090'
+            document.querySelector('.capsCircle').style.boxShadow = 'none'
+            capsClick = true
+        }
     }else if(e.keyCode == 65){
         pressKey('a')
     }else if(e.keyCode == 83){

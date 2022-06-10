@@ -13,8 +13,17 @@ svg{
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    flex-direction: column;
     overflow: hidden;
+}
+input{
+    width: 80%;
+    height: 50px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 20px;
+    font-size: 20px;
 }
 .border_container{
     width: 1220px;
@@ -24,9 +33,9 @@ svg{
     align-items: center;
     justify-content: center;
     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    animation: hueRotate 1.5s linear infinite;
+    animation: hueRotateAnim 1.5s linear infinite;
 }
-@keyframes hueRotate {
+@keyframes hueRotateAnim {
     0% {
       filter: hue-rotate(0deg);
     }
@@ -109,6 +118,28 @@ svg{
     width: 130px;
     display: flex;
     justify-content: flex-start;
+    flex-direction: column;
+}
+.capsTopRow{
+    width: 100%;
+    height: 10%;
+    padding: 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.capsBottomRow{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.capsCircle{
+    background-color: #909090;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
 }
 #enter{
     width: 130px;
