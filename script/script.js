@@ -1,6 +1,93 @@
-let keyBox = document.querySelectorAll('.key-box')
+let keyBox = Array.from(document.querySelectorAll('.key-box'))
 
 let capsClick = true
+
+let inputValue = document.getElementById('input')
+
+let characters = [];
+
+for(i=0; i<keyBox.length; i++){
+    characters.push(keyBox[i].id)
+}
+for(x=0; x<characters.length; x++){
+    if(/\d/.test(characters[x])==true){
+        if(characters[x].includes('n')){
+            characters[x] = characters[x][1]
+        }else{
+            if(characters[x].length>1){
+                characters[x] = ''
+            }
+        }
+    }else if(characters[x] == 'hyphen'){
+        characters[x] = '-'
+    }else if(characters[x] == 'equal'){
+        characters[x] = '='
+    }else if(characters[x] == 'space'){
+        characters[x] = ' '
+    }else if(characters[x] == 'tab'){
+        characters[x] = '   '
+    }else if(characters[x] == 'backslash'){
+        characters[x] = '/'
+    }else if(characters[x] == 'bracketr'){
+        characters[x] = '}'
+    }else if(characters[x] == 'bracketl'){
+        characters[x] = '{'
+    }else if(characters[x] == 'quote'){
+        characters[x] = "'"
+    }else if(characters[x] == 'semicolon'){
+        characters[x] = ';'
+    }else if(characters[x] == 'coma'){
+        characters[x] = ','
+    }else if(characters[x] == 'point'){
+        characters[x] = '.'
+    }else if(characters[x] == 'questionMark'){
+        characters[x] = '?'
+    }else if(characters[x] == 'wavyLine'){
+        characters[x] = '~'
+    }else{
+        if(characters[x].length>1){
+            characters[x] = ''
+        }
+    }
+}
+
+function clickKey(key){
+    key.style.boxShadow = '0 0 2px #999'
+    key.style.transform = 'scale(0.9)' 
+    setTimeout(function(){
+        key.style.boxShadow = '0 0 10px #999'
+        key.style.transform = 'scale(1)' 
+    }, 200)
+}
+
+// click on the key with the mouse
+keyBox.forEach(element => {
+    element.onclick = function(){
+        clickKey(element)
+        if(capsClick==true){
+            inputValue.value += characters[keyBox.indexOf(element)]
+        }else{
+            inputValue.value += characters[keyBox.indexOf(element)].toUpperCase()
+        }
+    }
+});
+caps.onclick = function(){
+    clickKey(caps)
+    if(capsClick == true){
+        document.querySelector('.capsCircle').style.background = 'white'
+        document.querySelector('.capsCircle').style.boxShadow = '0 0 15px white'
+        capsClick = false
+    }else{
+        document.querySelector('.capsCircle').style.background = '#909090'
+        document.querySelector('.capsCircle').style.boxShadow = 'none'
+        capsClick = true
+    }
+}
+backspace.onclick = function(){
+    clickKey(backspace)
+    inputValue.value = inputValue.value.slice(0, -1)
+}
+// click on key with the keyboard
 
 function pressKey(key){ 
     keyBox.forEach(element => {
@@ -14,35 +101,7 @@ function pressKey(key){
         document.getElementById(key).style.transform = 'scale(1)' 
     }       
 }
-// click on the key with the mouse
-keyBox.forEach(element => {
-    element.onclick = function(){
-        element.style.boxShadow = '0 0 2px #999'
-        element.style.transform = 'scale(0.9)' 
-        setTimeout(function(){
-            element.style.boxShadow = '0 0 10px #999'
-            element.style.transform = 'scale(1)' 
-        }, 200)
-    }
-});
-caps.onclick = function(){
-    caps.style.boxShadow = '0 0 2px #999'
-    caps.style.transform = 'scale(0.9)' 
-    setTimeout(function(){
-        caps.style.boxShadow = '0 0 10px #999'
-        caps.style.transform = 'scale(1)' 
-    }, 200)
-    if(capsClick == true){
-        document.querySelector('.capsCircle').style.background = 'white'
-        document.querySelector('.capsCircle').style.boxShadow = '0 0 15px white'
-        capsClick = false
-    }else{
-        document.querySelector('.capsCircle').style.background = '#909090'
-        document.querySelector('.capsCircle').style.boxShadow = 'none'
-        capsClick = true
-    }
-}
-// click on key with the keyboard
+
 document.body.onkeydown = function(e){
     if(e.keyCode == 27){
         pressKey('esc')
